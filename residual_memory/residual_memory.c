@@ -14,7 +14,7 @@ typedef enum clearBufferOptions
 static int Password_setSenstiveData(clear_buffer_t clear_buffer);
 static int Stack_readData(clear_buffer_t clear_buffer);
 
-int main() 
+int main(int argc, char *argv[]) 
 {
     printf("Result of the operation without clearing the buffer: \n");
     Password_setSenstiveData(NOT_CLEAR_BUFFER);
