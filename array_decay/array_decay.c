@@ -16,20 +16,14 @@ static int arrayDecay(void)
 {
     int ret = 0u;
 
-    int array[] = 
-    { 
-        0u, 
-        1u, 
-        2u, 
-        3u, 
-        4u 
-    };
+    int array[] = { 0u, 1u, 2u, 3u,4u };
 
     printf("- Array memory size: %i-bytes\n", sizeof(array));
 
     ret = helperFunction(array);
     if(ret < 0u)
     {
+        ret = -EINVAL;
         goto end_of_function;
     }
     
@@ -45,7 +39,6 @@ static int helperFunction(int array[])
     {
         ret = -ENOMEM;
         goto end_of_function;
-
     }
 
     printf("- Array memory size: %i-bytes \n", sizeof(array));
