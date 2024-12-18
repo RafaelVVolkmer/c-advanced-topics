@@ -11,24 +11,24 @@ typedef struct paddingStruct
 ```
 
 ```c
-typedef struct __attribute__((packed)) paddingStruct 
+typedef struct __attribute__((packed)) packedStruct 
 {
     int  element_0;
     char element_1;
     int  element_2;
-} padding_t;
+} packed_t;
 
 ```
 
 ```c
 #pragma pack(push, 1u)
 
-typedef struct paddingStruct 
+typedef struct pragmaStruct 
 {
     int  element_0;
     char element_1;
     int  element_2;
-} padding_t;
+} pragma_t;
 
 #pragma pack(pop)
 ```
