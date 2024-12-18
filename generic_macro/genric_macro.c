@@ -72,7 +72,6 @@ end_of_function:
 
 static int strSize(const char string[ ], size_t __attribute__((unused)) dummy_arg)
 {
-    
     int ret = 0u;
     
     size_t string_size = 0u;
