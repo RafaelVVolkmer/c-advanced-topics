@@ -5,7 +5,7 @@
 static int arrSize(const int array[ ], size_t num_total_bytes);
 static int strSize(const char string[ ], size_t __attribute__((unused)) dummy_arg);
 
-#define GET_VET_SIZE(vet)     \
+#define GET_VET_SIZE(vet)       \
     _Generic( (vet),            \
         int *   : arrSize,      \
         char *  : strSize       \
