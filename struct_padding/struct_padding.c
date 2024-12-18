@@ -29,7 +29,7 @@ typedef struct pragmaStruct
 
 static int memDumpStruct(const void *data, size_t size);
 
-int main(void) 
+int main(int argc, char *argv[]) 
 {
     padding_t struct_0;
     packed_t  struct_1;
