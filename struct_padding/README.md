@@ -8,14 +8,25 @@ typedef struct paddingStruct
     int  element_2;
 } padding_t;
 
-padding_t struct_0 =
-{
-  .element_0 = 0xAABBCCDD,
-  .element_1 = 'A',
-  .element_2 = 0xDDCCBBAA
-};
 ```
 
 ```c
+typedef struct __attribute__((packed)) paddingStruct 
+{
+    int  element_0;
+    char element_1;
+    int  element_2;
+} padding_t;
 
+```
+
+```c
+#pragma pack(push, 1)
+typedef struct paddingStruct 
+{
+    int  element_0;
+    char element_1;
+    int  element_2;
+} padding_t;
+#pragma pack(pop)
 ```
