@@ -22,11 +22,13 @@ typedef struct __attribute__((packed)) paddingStruct
 
 ```c
 #pragma pack(push, 1)
+
 typedef struct paddingStruct 
 {
     int  element_0;
     char element_1;
     int  element_2;
 } padding_t;
+
 #pragma pack(pop)
 ```
