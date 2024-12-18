@@ -13,19 +13,33 @@ static int strSize(const char string[ ], size_t __attribute__((unused)) dummy_ar
 
 int main(int argc, char *argv[]) 
 {
-    int  arr[] = {1, 2, 3, 4, 5};
+    int main_ret = 0u;
+    
+    int  arr[] = {1u, 2u, 3u, 4u, 5u};
     char str[] = "Hello, World!";
     
     size_t arr_size = 0u;
     size_t str_size = 0u;
     
     arr_size = GET_ARRAY_SIZE(arr);
+    if(arr_size <= 0u)
+    {
+        main_ret = -EINVAL;
+        goto end_of_function;
+    }
+    
     str_size = GET_ARRAY_SIZE(str);
-
+    if(str_size <= 0u)
+    {
+        main_ret = -EINVAL;
+        goto end_of_function;
+    }
+    
     printf("Size of array:  %zu \n", arr_size);
     printf("Size of string: %zu \n", str_size);
 
-    return 0;
+end_of_function:
+    return main_ret;
 }
 
 static int arrSize(const int array[ ], size_t num_total_bytes) 
