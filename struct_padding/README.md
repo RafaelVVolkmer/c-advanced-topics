@@ -7,13 +7,15 @@ typedef struct paddingStruct
     char element_1;
     int  element_2;
 } padding_t;
-```
 
-```c
 padding_t struct_0 =
 {
   .element_0 = 0xAABBCCDD,
   .element_1 = 'A',
   .element_2 = 0xDDCCBBAA
 };
+```
+
+```c
+
 ```
