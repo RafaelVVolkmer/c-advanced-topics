@@ -21,7 +21,7 @@ typedef struct __attribute__((packed)) paddingStruct
 ```
 
 ```c
-#pragma pack(push, 1)
+#pragma pack(push, 1u)
 
 typedef struct paddingStruct 
 {
