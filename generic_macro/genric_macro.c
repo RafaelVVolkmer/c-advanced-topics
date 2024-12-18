@@ -5,7 +5,7 @@
 static int arrSize(const int array[ ], size_t num_total_bytes);
 static int strSize(const char string[ ], size_t __attribute__((unused)) dummy_arg);
 
-#define GET_ARRAY_SIZE(vet)     \
+#define GET_VET_SIZE(vet)     \
     _Generic( (vet),            \
         int *   : arrSize,      \
         char *  : strSize       \
@@ -21,14 +21,14 @@ int main(int argc, char *argv[])
     size_t arr_size = 0u;
     size_t str_size = 0u;
     
-    arr_size = GET_ARRAY_SIZE(arr);
+    arr_size = GET_VET_SIZE(arr);
     if(arr_size <= 0u)
     {
         main_ret = -EINVAL;
         goto end_of_function;
     }
     
-    str_size = GET_ARRAY_SIZE(str);
+    str_size = GET_VET_SIZE(str);
     if(str_size <= 0u)
     {
         main_ret = -EINVAL;
